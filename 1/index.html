@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		.container{
+			height: 800px;
+			width: 1000px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: grey
+		}
+		.head{
+			width:100%;
+		}
+		.bg-green{
+			background-color: green
+		}
+		.margin-top{
+			margin-top: 10px
+		}
+		.txt{
+			width:80%;
+		}
+		.rate{
+			width:20%;
+		}
+		.d-flex{
+			display: flex
+		}
+		.bg-blue{
+			background-color: blue
+		}
+		.border{
+			border:1px solid black;
+		}
+		.col-3{
+			width: 30%
+		}
+		.col-9{
+			width: 69%
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+	<div class="container border">
+		<div class="head d-flex" style="height: 150px">
+			<div class="txt border" style="height: 150px">
+				<h1>Довод (2020)</h1>
+				<p>Не самое ужасное кино</p>
+			</div>
+			<div class="rate border" style="height: 150px">
+				<img style="height: 60px;margin-left: 10px; margin-top:10px;" class="star" src="star.png">
+				<h1 class="nn h1" style="margin-left: 20px">0</h1>
+			</div>
+		</div>
+		<div class="head margin-top d-flex" style="height: 800px">
+			<div class="col-3">
+				<img style="height: 410px; margin-left: 10px;margin-top: 5px;" src="poster.jpg">
+				<button class="btn" style="width:150px;height:40px;margin-left: 10px; margin-top: 10px">Добавить в список</button>
+			</div>
+			<div class="col-9" style="margin-left: 10px margin-top:30px;">
+				<iframe width="660" height="415" src="https://www.youtube.com/embed/C6dZA-buNCw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<h3>Слишком закрученный сюжет точнее многогранный.Иногда актеры с каменным лицом. 5/10</h3>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		let btn = document.querySelector(".btn")
+		let star = document.querySelector(".star")
+		let n = 0
+		let h1 = document.querySelector(".h1")
+		btn.onclick = function(){
+			alert("Добавлено в список.")
+		}
+		star.onclick = function(){
+			n = n+1
+			h1.innerHTML = n
+		}
+	</script>
+</body>
+</html>
